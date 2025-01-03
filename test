@@ -23,7 +23,7 @@ local function findPickaxeTool()
                 if item.Name:find("Pickaxe") then return item end
             end
         end
-        task.wait(0.1)
+        task.wait(0.01)
     end
 end
 
@@ -35,7 +35,7 @@ local function usePickaxeTool(pickaxeTool)
     end
     player.Character.Humanoid:EquipTool(pickaxeTool)
     pickaxeTool:Activate()
-    task.wait(0.2) -- Reduced from 1 to 0.2 for faster swings
+    task.wait(0.02) -- Reduced from 1 to 0.2 for faster swings
     player.Character.Humanoid:UnequipTools()
 end
 
